@@ -2,6 +2,9 @@ import Onboard from '@web3-onboard/core'
 import type { OnboardAPI } from '@web3-onboard/core'
 import injectedWalletsModule from '@web3-onboard/injected-wallets'
 import walletConnectModule from '@web3-onboard/walletconnect'
+import { Buffer } from 'buffer'
+
+globalThis.Buffer = Buffer
 
 const injected = injectedWalletsModule()
 const walletConnect = walletConnectModule()
